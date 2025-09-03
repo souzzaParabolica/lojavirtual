@@ -19,7 +19,7 @@
   <body class="relative bg-[#dedede] overflow-x-hidden">
 
     <header
-      class="fixed z-[99] flex justify-center items-center mt-5 w-screen font-[poppins]"
+      class="fixed z-[99] flex justify-center items-center mt-5 w-screen font-[poppins] animate-header"
     >
       <nav
         class="rounded-[50px] flex justify-center items-center gap-5 text-white/80 text-lg p-5 list-none"
@@ -29,7 +29,7 @@
         <li class="cursor-pointer hover:font-semibold">About</li>
         <li class="cursor-pointer hover:font-semibold">Contact</li>
         <li class="cursor-pointer hover:font-semibold">History</li>
-        <div class="container relative flex items-center text-white/80">
+        <div class="container relative flex items-center text-white/80 animate-search">
         <input
           type="text"
           name="text"
@@ -63,15 +63,15 @@
         </div>
       </div>
       </nav>
-       <span class="cursor-pointer absolute top-5 left-[95%] flex justify-center items-center"> <i class="carrinho text-white/80" data-lucide="shopping-cart"></i></span>
+       <span class="cursor-pointer absolute top-5 left-[95%] flex justify-center items-center animate-cart"> <i class="carrinho text-white/80" data-lucide="shopping-cart"></i></span>
     </header>
     <div class="hero w-full h-screen relative">
       <img
-        class="heroImg w-full h-full object-cover object-center"
+        class="heroImg w-full h-full object-cover object-center animate-hero"
         src="features/img/iphonexr.webp"
         alt=""
       />
-      <h1 class="absolute text-start text-white/90 w-[1030px] text-7xl font-bold z-20">
+      <h1 class="absolute text-start text-white/90 w-[1030px] text-7xl font-bold z-20 animate-title">
         HIGH QUALITY DEVICES SEPARETED SPECIALY FOR YOU
       </h1>
       <div class="absolute top-0 left-0 overlay w-screen h-full bg-black/10"></div>
