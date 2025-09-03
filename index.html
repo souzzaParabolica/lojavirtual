@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="features/style.css" />
+    <title>Document</title>
+  </head>
+  <body class="relative bg-[#dedede] overflow-x-hidden">
+
+    <header
+      class="fixed z-[99] flex justify-center items-center mt-5 w-screen font-[poppins]"
+    >
+      <nav
+        class="rounded-[50px] flex justify-center items-center gap-5 text-white/80 text-lg p-5 list-none"
+      >
+        <li class="cursor-pointer hover:font-semibold">Products</li>
+        <li class="cursor-pointer hover:font-semibold">News</li>
+        <li class="cursor-pointer hover:font-semibold">About</li>
+        <li class="cursor-pointer hover:font-semibold">Contact</li>
+        <li class="cursor-pointer hover:font-semibold">History</li>
+        <div class="container relative flex items-center text-white/80">
+        <input
+          type="text"
+          name="text"
+          class="input"
+          required=""
+          placeholder="Type to search..."
+        />
+        <div class="icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="ionicon"
+            viewBox="0 0 512 512"
+          >
+            <title>Search</title>
+            <path
+              d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z"
+              fill="none"
+              stroke="currentColor"
+              stroke-miterlimit="10"
+              stroke-width="32"
+            ></path>
+            <path
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-miterlimit="10"
+              stroke-width="32"
+              d="M338.29 338.29L448 448"
+            ></path>
+          </svg>
+        </div>
+      </div>
+      </nav>
+       <span class="cursor-pointer absolute top-5 left-[95%] flex justify-center items-center"> <i class="carrinho text-white/80" data-lucide="shopping-cart"></i></span>
+    </header>
+    <div class="hero w-full h-screen relative">
+      <img
+        class="heroImg w-full h-full object-cover object-center"
+        src="features/img/iphonexr.webp"
+        alt=""
+      />
+      <h1 class="absolute text-start text-white/90 w-[1030px] text-7xl font-bold z-20">
+        HIGH QUALITY DEVICES SEPARETED SPECIALY FOR YOU
+      </h1>
+      <div class="absolute top-0 left-0 overlay w-screen h-full bg-black/10"></div>
+    </div>
+
+    <div
+      class="display font-[poppins] my-[10rem] flex flex-col gap-10 px-[15%]"
+    >
+      <h2
+        class="titulo text-black/90 font-semibold text-4xl tracking-[2px] flex justify-center items-center"
+      >
+        MAIS PROCURADOS
+      </h2>
+
+      <!-- CARD 1 -->
+
+      <div class="cards flex gap-10 justify-evenly items-center">
+        <div class="card font-[poppins] bg-white/90 w-[250px] rounded-lg p-3">
+          <img
+            class="rounded-lg w-[226px] h-[180px] object-cover"
+            src="features/img/xiaomi.webp"
+            alt="" 
+          />
+          <h2 class="leading-5 mt-5">Android de última geração</h2>
+          <p class="text-sm font-semibold mt-3">R$ 2500,00</p>
+
+          <button class="button">Comprar</button>
+        </div>
+
+        <!-- CARD 2 -->
+
+        <div class="card font-[poppins] bg-white/90 w-[250px] rounded-lg p-3">
+          <img
+            class="rounded-lg w-[226px] h-[180px] object-cover"
+            src="features/img/iphone8.webp"
+            alt="" 
+          />
+          <h2 class="leading-5 mt-5">Iphone de última geração</h2>
+          <p class="text-sm font-semibold mt-3">R$ 2500,00</p>
+
+          <button class="button">Comprar</button>
+        </div>
+
+        <!-- CARD 3 -->
+
+        <div class="card font-[poppins] bg-white/90 w-[250px] rounded-lg p-3">
+          <img
+            class="rounded-lg w-[226px] h-[180px] object-cover"
+            src="features/img/iphone13pro.webp"
+            alt="" 
+          />
+          <h2 class="leading-5 mt-5">Iphone de última geração</h2>
+          <p class="text-sm font-semibold mt-3">R$ 2500,00</p>
+
+          <button class="button">Comprar</button>
+        </div>
+
+        <!-- CARD 4 -->
+
+        <div class="card font-[poppins] bg-white/90 w-[250px] rounded-lg p-3">
+          <img
+            class="rounded-lg w-[226px] h-[180px] object-cover"
+            src="features/img/iphone13.webp"
+            alt=""
+          />
+          <h2 class="leading-5 mt-5">Iphone de última geração</h2>
+          <p class="text-sm font-semibold mt-3">R$ 2500,00</p>
+
+          <button class="button">Comprar</button>
+        </div>
+      </div>
+
+      <!-- DIVISOR -->
+
+      <!-- CARD 5 -->
+
+      <div class="cards flex gap-10 justify-evenly items-center">
+        <div class="card font-[poppins] bg-white/90 w-[250px] rounded-lg p-3">
+          <img
+            class="rounded-lg w-[226px] h-[180px] object-cover"
+            src="features/img/andoroid.webp"
+            alt=""
+          />
+          <h2 class="leading-5 mt-5">Android de última geração</h2>
+          <p class="text-sm font-semibold mt-3">R$ 2500,00</p>
+
+          <button class="button">Comprar</button>
+        </div>
+
+        <!-- CARD 6 -->
+
+        <div class="card font-[poppins] bg-white/90 w-[250px] rounded-lg p-3">
+          <img
+            class="rounded-lg w-[226px] h-[180px] object-cover"
+            src="features/img/andoroid2.webp"
+            alt=""
+          />
+          <h2 class="leading-5 mt-5">Android de última geração</h2>
+          <p class="text-sm font-semibold mt-3">R$ 2500,00</p>
+
+          <button class="button">Comprar</button>
+        </div>
+
+        <!-- CARD 7 -->
+
+        <div class="card font-[poppins] bg-white/90 w-[250px] rounded-lg p-3">
+          <img
+            class="rounded-lg w-[226px] h-[180px] object-cover"
+            src="features/img/apple.webp"
+            alt=""
+          />
+          <h2 class="leading-5 mt-5">Iphone de última geração</h2>
+          <p class="text-sm font-semibold mt-3">R$ 2500,00</p>
+
+          <button class="button">Comprar</button>
+        </div>
+
+        <!-- CARD 8 -->
+
+        <div class="card font-[poppins] bg-white/90 w-[250px] rounded-lg p-3">
+          <img
+            class="rounded-lg w-[226px] h-[180px] object-cover"
+            src="features/img/andoroid3.webp"
+            alt="" 
+          />
+          <h2 class="leading-5 mt-5">Android de última geração</h2>
+          <p class="text-sm font-semibold mt-3">R$ 2500,00</p>
+
+          <button class="button">Comprar</button>
+        </div>
+      </div>
+
+      <!-- DIVISOR -->
+
+      <!-- CARD 9 -->
+
+      <div class="cards flex gap-10 justify-evenly items-center">
+        <div class="card font-[poppins] bg-white/90 w-[250px] rounded-lg p-3">
+          <img
+            class="rounded-lg w-[226px] h-[180px] object-cover"
+            src="features/img/andoroid4.webp"
+            alt="" 
+          />
+          <h2 class="leading-5 mt-5">Android de última geração</h2>
+          <p class="text-sm font-semibold mt-3">R$ 2500,00</p>
+
+          <button class="button">Comprar</button>
+        </div>
+
+        <!-- CARD 10 -->
+
+        <div class="card font-[poppins] bg-white/90 w-[250px] rounded-lg p-3">
+          <img
+            class="rounded-lg w-[226px] h-[180px] object-cover"
+            src="features/img/apple2.webp"
+            alt="" 
+          />
+          <h2 class="leading-5 mt-5">Iphone de última geração</h2>
+          <p class="text-sm font-semibold mt-3">R$ 2500,00</p>
+
+          <button class="button">Comprar</button>
+        </div>
+
+        <!-- CARD 11 -->
+
+        <div class="card font-[poppins] bg-white/90 w-[250px] rounded-lg p-3">
+          <img
+            class="rounded-lg w-[226px] h-[180px] object-cover"
+            src="features/img/apple4.webp"
+            alt="" 
+          />
+          <h2 class="leading-5 mt-5">Iphone de última geração</h2>
+          <p class="text-sm font-semibold mt-3">R$ 2500,00</p>
+
+          <button class="button">Comprar</button>
+        </div>
+
+        <!-- CARD 12 -->
+
+        <div class="card font-[poppins] bg-white/90 w-[250px] rounded-lg p-3">
+          <img
+            class="rounded-lg w-[226px] h-[180px] object-cover"
+            src="features/img/andoroid5.webp"
+            alt="" 
+          />
+          <h2 class="leading-5 mt-5">Android de última geração</h2>
+          <p class="text-sm font-semibold mt-3">R$ 2500,00</p>
+
+          <button class="button">Comprar</button>
+        </div>
+      </div>
+
+      <!-- DIVISOR -->
+      </div>
+    </div>
+
+    <script src="features/animation.js"></script>
+    <script src="features/script.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
