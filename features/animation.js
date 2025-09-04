@@ -1,11 +1,9 @@
-const isMobile =
-  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-    navigator.userAgent
-  );
-// maskSize: isMobile ? "50vw" : "0vw", // 50vw se for mobile, 20vw se for desktop
+// Detecta se é mobile pela largura da tela
+const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+// Hero shrink no scroll
 gsap.to(".hero", {
   height: "50vh",
-
   scrollTrigger: {
     scrub: 1,
     trigger: "h1",
@@ -15,10 +13,9 @@ gsap.to(".hero", {
   },
 });
 
-// Timeline de animação
+// Timeline de animação inicial
 const tl = gsap.timeline();
 
-// Animações em sequência
 tl.to(".animate-header", {
   opacity: 1,
   y: 0,
@@ -77,25 +74,46 @@ tl.to(".animate-header", {
     "-=0.2"
   );
 
+// Título animado no scroll
 gsap.from(".display .titulo", {
   opacity: 0,
   y: 50,
   scrollTrigger: {
-    trigger: ".display",
-    start: "top 60%",
-    end: "top 50%",
+    trigger: isMobile ? ".titulo" : ".display",
+    start: isMobile ? "top 80%" : "top 60%",
+    end: isMobile ? "top 70%" : "top 50%",
     markers: false,
   },
 });
 
-gsap.from(".display .card", {
-  opacity: 0,
-  y: 50,
-  stagger: 0.2,
-  scrollTrigger: {
-    trigger: ".display",
-    start: "top 50%",
-    end: "top 30%",
-    markers: false,
-  },
-});
+if (isMobile) {
+  // Seleciona todos os cards
+  document.querySelectorAll(".display .card").forEach((card, i) => {
+    gsap.from(card, {
+      opacity: 0,
+      y: 10,
+      duration: 0.6,
+      scrollTrigger: {
+        trigger: card, // cada card vira seu próprio trigger
+        start: "top 95%", // quando o card chega perto do viewport
+        end: "top 70%",
+       markers: false, // ativa se quiser debugar
+      },
+    });
+  });
+} else {
+  // Desktop: todos juntos de uma vez
+  gsap.from(".display .card", {
+    opacity: 0,
+    y: 50,
+    duration: 0.6,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".display",
+      start: "top 50%",
+      end: "top 30%",
+      toggleActions: "play none none reverse",
+      // markers: true,
+    },
+  });
+}

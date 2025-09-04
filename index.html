@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html class="" lang="pt-br">
   <head>
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -19,25 +19,34 @@
   <body class="relative bg-[#dedede] overflow-x-hidden">
 
     <header
-      class="fixed z-[99] flex justify-center items-center mt-5 w-screen font-[poppins] animate-header"
-    >
-      <nav
-        class="rounded-[50px] flex justify-center items-center gap-5 text-white/80 text-lg p-5 list-none"
-      >
-        <li class="cursor-pointer hover:font-semibold">Products</li>
-        <li class="cursor-pointer hover:font-semibold">News</li>
-        <li class="cursor-pointer hover:font-semibold">About</li>
-        <li class="cursor-pointer hover:font-semibold">Contact</li>
-        <li class="cursor-pointer hover:font-semibold">History</li>
-        <div class="container relative flex items-center text-white/80 animate-search">
+  class="fixed z-[99] flex justify-center items-center w-full mt-5 font-[poppins] animate-header"
+>
+  <nav
+  id="menu-nav"
+    class="rounded-[50px] flex flex-col xl:flex-row 2xl:flex-row justify-center items-center gap-2 sm:gap-5 text-white/80 text-sm sm:text-lg px-2 py-2 sm:px-5 sm:py-3 list-none transition-all duration-300 ease-in-out overflow-hidden w-[40px] md:w-auto"
+  >
+    <!-- Botão hambúrguer (aparece só no mobile) -->
+    <button id="menu-btn" class="block md:hidden">
+      <i data-lucide="menu" class="text-white w-6 h-6"></i>
+    </button>
+
+    <!-- Itens do menu -->
+    <ul id="menu-items" class="hidden md:flex gap-5 items-center">
+      <li class="cursor-pointer hover:font-semibold">Products</li>
+      <li class="cursor-pointer hover:font-semibold">News</li>
+      <li class="cursor-pointer hover:font-semibold">About</li>
+      <li class="cursor-pointer hover:font-semibold">Contact</li>
+      <li class="cursor-pointer hover:font-semibold">History</li>
+
+      <div class="container relative flex items-center text-white/80 animate-search">
         <input
           type="text"
           name="text"
-          class="input"
-          required=""
+          class="input w-[25px] h-[25px] pl-[25px] sm:w-[35px] sm:h-[35px] sm:pl-[35px] md:w-[45px] md:h-[45px] xl:w-[45px] xl:h-[45px] xl:pl-[45px] 2xl:w-[45px] 2xl:h-[45px] 2xl:pl-[45px]"
+          required
           placeholder="Type to search..."
         />
-        <div class="icon">
+        <div class="icon w-[25px] h-[25px] sm:w-[35px] sm:h-[35px] md:w-[45px] md:h-[45px] xl:w-[45px] xl:h-[45px] 2xl:w-[45px] 2xl:h-[45px]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="ionicon"
@@ -62,16 +71,23 @@
           </svg>
         </div>
       </div>
-      </nav>
-       <span class="cursor-pointer absolute top-5 left-[95%] flex justify-center items-center animate-cart"> <i class="carrinho text-white/80" data-lucide="shopping-cart"></i></span>
-    </header>
+    </ul>
+  </nav>
+</header>
+<span
+  class="z-[99] w-[40px] h-[40px] sm:w-[35px] sm:h-[35px] md:w-[45px] md:h-[45px] cursor-pointer fixed top-[90%] right-3 xl:top-5 xl:right-10 2xl:top-5 2xl:right-10 flex justify-center items-center animate-cart"
+>
+  <i class="carrinho text-white/80" data-lucide="shopping-cart"></i>
+</span>
+
+
     <div class="hero w-full h-screen relative">
       <img
         class="heroImg w-full h-full object-cover object-center animate-hero"
         src="features/img/iphonexr.webp"
         alt=""
       />
-      <h1 class="absolute text-start text-white/90 w-[1030px] text-7xl font-bold z-20 animate-title">
+      <h1 class="mx-5 xl:mx-0 2xl:mx-0 absolute text-start text-white/90 xl:w-[1030px] 2xl:w-[1030px] text-3xl xl:text-7xl 2xl:text-7xl font-bold z-20 animate-title top-1/2 xl:top-1/2 xl:left-1/2 xl:-translate-x-1/2 xl:-translate-y-1/2 2xl:top-1/2 2xl:left-1/2 2xl:-translate-x-1/2 2xl:-translate-y-1/2">
         HIGH QUALITY DEVICES SEPARETED SPECIALY FOR YOU
       </h1>
       <div class="absolute top-0 left-0 overlay w-screen h-full bg-black/10"></div>
@@ -88,7 +104,7 @@
 
       <!-- CARD 1 -->
 
-      <div class="cards flex gap-10 justify-evenly items-center">
+      <div class="cards flex flex-col xl:flex-row 2xl:flex-row gap-10 justify-evenly items-center">
         <div class="card font-[poppins] bg-white/90 w-[250px] rounded-lg p-3">
           <img
             class="rounded-lg w-[226px] h-[180px] object-cover"
@@ -148,7 +164,7 @@
 
       <!-- CARD 5 -->
 
-      <div class="cards flex gap-10 justify-evenly items-center">
+      <div class="cards flex flex-col xl:flex-row 2xl:flex-row gap-10 justify-evenly items-center">
         <div class="card font-[poppins] bg-white/90 w-[250px] rounded-lg p-3">
           <img
             class="rounded-lg w-[226px] h-[180px] object-cover"
@@ -208,7 +224,7 @@
 
       <!-- CARD 9 -->
 
-      <div class="cards flex gap-10 justify-evenly items-center">
+      <div class="cards flex flex-col xl:flex-row 2xl:flex-row gap-10 justify-evenly items-center">
         <div class="card font-[poppins] bg-white/90 w-[250px] rounded-lg p-3">
           <img
             class="rounded-lg w-[226px] h-[180px] object-cover"
