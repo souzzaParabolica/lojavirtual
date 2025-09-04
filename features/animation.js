@@ -97,7 +97,7 @@ if (isMobile) {
         trigger: card, // cada card vira seu próprio trigger
         start: "top 95%", // quando o card chega perto do viewport
         end: "top 70%",
-       markers: true, // ativa se quiser debugar
+       markers: false, // ativa se quiser debugar
       },
     });
   });
@@ -113,7 +113,7 @@ if (isMobile) {
       start: "top 50%",
       end: "top 30%",
       toggleActions: "play none none reverse",
-      // markers: true,
+      // markers: false,
     },
   });
 }
