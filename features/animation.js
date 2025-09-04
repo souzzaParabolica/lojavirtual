@@ -82,7 +82,7 @@ gsap.from(".display .titulo", {
     trigger: isMobile ? ".titulo" : ".display",
     start: isMobile ? "top 95%" : "top 60%",
     end: isMobile ? "top 70%" : "top 50%",
-    markers: true,
+    markers: false,
   },
 });
 
