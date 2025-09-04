@@ -80,7 +80,7 @@ gsap.from(".display .titulo", {
   y: 50,
   scrollTrigger: {
     trigger: isMobile ? ".titulo" : ".display",
-    start: isMobile ? "top 95%" : "top 60%",
+    start: isMobile ? "top 95%" : "top 70%",
     end: isMobile ? "top 70%" : "top 50%",
     markers: false,
   },
@@ -112,8 +112,7 @@ if (isMobile) {
       trigger: ".display",
       start: "top 50%",
       end: "top 30%",
-      toggleActions: "play none none reverse",
-      // markers: false,
+      markers: false,
     },
   });
 }
