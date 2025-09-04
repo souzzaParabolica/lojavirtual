@@ -80,9 +80,9 @@ gsap.from(".display .titulo", {
   y: 50,
   scrollTrigger: {
     trigger: isMobile ? ".titulo" : ".display",
-    start: isMobile ? "top 80%" : "top 60%",
+    start: isMobile ? "top 95%" : "top 60%",
     end: isMobile ? "top 70%" : "top 50%",
-    markers: false,
+    markers: true,
   },
 });
 
@@ -97,7 +97,7 @@ if (isMobile) {
         trigger: card, // cada card vira seu próprio trigger
         start: "top 95%", // quando o card chega perto do viewport
         end: "top 70%",
-       markers: false, // ativa se quiser debugar
+       markers: true, // ativa se quiser debugar
       },
     });
   });
