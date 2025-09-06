@@ -96,7 +96,7 @@ if (isMobile) {
         trigger: card, // cada card vira seu próprio trigger
         start: "top 95%", // quando o card chega perto do viewport
         end: "top 70%",
-       markers: false, // ativa se quiser debugar
+        markers: false, // ativa se quiser debugar
       },
     });
   });
@@ -129,20 +129,22 @@ gsap.from(".descubra h2", {
 
 if (isMobile) {
   // Seleciona todos os cards
-  document.querySelectorAll(".display-descubra .card-descubra").forEach((card, i) => {
-    gsap.from(card, {
-      opacity: 0,
-      y: 10,
-      duration: 0.6,
-      scrollTrigger: {
-        trigger: card, // cada card vira seu próprio trigger
-        start: "top 50%", // quando o card chega perto do viewport
-        end: "top 40%",
-        scrub: 1.3,
-        markers: false, // ativa se quiser debugar
-      },
+  document
+    .querySelectorAll(".display-descubra .card-descubra")
+    .forEach((card, i) => {
+      gsap.from(card, {
+        opacity: 0,
+        y: 10,
+        duration: 0.6,
+        scrollTrigger: {
+          trigger: card, // cada card vira seu próprio trigger
+          start: "top 50%", // quando o card chega perto do viewport
+          end: "top 40%",
+          scrub: 1.3,
+          markers: false, // ativa se quiser debugar
+        },
+      });
     });
-  });
 } else {
   // Desktop: todos juntos de uma vez
   gsap.from(".display-descubra .card-descubra", {

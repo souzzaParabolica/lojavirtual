@@ -89,7 +89,7 @@ li {
 }
 
 .card-descubra-M {
-    transition:box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
     flex: 1;
     display: flex;
 }
@@ -109,7 +109,7 @@ li {
 }
 
 .card:hover,
-.card-descubra:hover{
+.card-descubra:hover {
     transform: scale(1.05) !important;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
