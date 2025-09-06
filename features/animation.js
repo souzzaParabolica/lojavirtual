@@ -61,6 +61,7 @@ tl.to(".animate-header", {
       ease: "elastic.out(1, 0.75)",
     },
     "-=0.3"
+  );
 
 // Título animado no scroll
 gsap.from(".display .titulo", {
