@@ -61,17 +61,6 @@ tl.to(".animate-header", {
       ease: "elastic.out(1, 0.75)",
     },
     "-=0.3"
-  )
-  .to(
-    ".animate-cart",
-    {
-      opacity: 1,
-      x: 0,
-      duration: 0.6,
-      ease: "power2.out",
-    },
-    "-=0.2"
-  );
 
 // Título animado no scroll
 gsap.from(".display .titulo", {
