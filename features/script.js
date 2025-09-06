@@ -37,3 +37,33 @@ btn.addEventListener("click", () => {
     items.classList.toggle("flex-col");
   }, 200); // espera o nav expandir/fechar um pouco
 });
+
+  const backToTopBtn = document.getElementById("back-to-top");
+
+  // Mostrar/ocultar botão ao rolar
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      gsap.to(backToTopBtn, {
+        opacity: 1,
+        scale: 1,
+        duration: 0.3,
+        ease: "power2.out",
+      });
+    } else {
+      gsap.to(backToTopBtn, {
+        opacity: 0,
+        scale: 0.9,
+        duration: 0.3,
+        ease: "power2.out",
+      });
+    }
+  });
+
+  // Voltar ao topo com animação suave
+  backToTopBtn.addEventListener("click", () => {
+    gsap.to(window, {
+      scrollTo: 0,
+      duration: 0.8,
+      ease: "power2.out",
+    });
+  });

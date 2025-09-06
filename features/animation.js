@@ -3,7 +3,6 @@ const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
 // Hero shrink no scroll
 gsap.to(".hero", {
-  height: "50vh",
   scrollTrigger: {
     scrub: 1,
     trigger: "h1",
@@ -106,12 +105,87 @@ if (isMobile) {
   gsap.from(".display .card", {
     opacity: 0,
     y: 50,
-    duration: 0.6,
+    duration: 1,
     ease: "power2.out",
     scrollTrigger: {
       trigger: ".display",
       start: "top 50%",
-      end: "top 30%",
+      markers: false,
+    },
+  });
+}
+
+gsap.from(".descubra h2", {
+  opacity: 0,
+  y: 50,
+  duration: 1,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: isMobile ? ".descubra" : ".descubra",
+    start: isMobile ? "top 35%" : "top 40%",
+    markers: false,
+  },
+});
+
+if (isMobile) {
+  // Seleciona todos os cards
+  document.querySelectorAll(".display-descubra .card-descubra").forEach((card, i) => {
+    gsap.from(card, {
+      opacity: 0,
+      y: 10,
+      duration: 0.6,
+      scrollTrigger: {
+        trigger: card, // cada card vira seu próprio trigger
+        start: "top 50%", // quando o card chega perto do viewport
+        end: "top 40%",
+        scrub: 1.3,
+        markers: false, // ativa se quiser debugar
+      },
+    });
+  });
+} else {
+  // Desktop: todos juntos de uma vez
+  gsap.from(".display-descubra .card-descubra", {
+    opacity: 0,
+    duration: 0.6,
+    stagger: 0.2,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".display-descubra",
+      start: "top 50%",
+      markers: false,
+    },
+  });
+}
+
+if (isMobile) {
+  // Seleciona todos os cards
+  document
+    .querySelectorAll(".display-descubra .card-descubra-M")
+    .forEach((card, i) => {
+      gsap.from(card, {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        scrollTrigger: {
+          trigger: card, // cada card vira seu próprio trigger
+          start: "top 40%", // quando o card chega perto do viewport
+          end: "top 20%",
+          scrub: 1.3,
+          markers: false, // ativa se quiser debugar
+        },
+      });
+    });
+} else {
+  // Desktop: todos juntos de uma vez
+  gsap.from(".display-descubra .card-descubra-M", {
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".display-descubra",
+      start: "top 25%",
       markers: false,
     },
   });
