@@ -3,11 +3,12 @@ const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
 // Hero shrink no scroll
 gsap.to(".hero", {
+  scale:'0.95',
   scrollTrigger: {
     scrub: 1,
     trigger: "h1",
     start: "top 35%",
-    end: "top -20%",
+    end: "top -40%",
     markers: false,
   },
 });
