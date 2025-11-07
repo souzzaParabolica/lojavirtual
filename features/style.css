@@ -109,6 +109,15 @@ li {
     background-image: linear-gradient(160deg, rgba(0, 0, 0, 0.417), rgba(255, 255, 255, 0.168));
 }
 
+.card-descubra img, .card-descubra-M img{
+    transition: transform .3s ease-in-out;
+}
+
+.card-descubra img:hover,
+.card-descubra-M img:hover{
+    transform: scale(1.02);
+}
+
 .card img {
     transition: transform 0.3s ease-in-out;
     margin: 0 auto;
