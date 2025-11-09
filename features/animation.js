@@ -3,7 +3,7 @@ const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
 // Hero shrink no scroll
 gsap.to(".hero", {
-  scale:'0.95',
+  scale:'0.90',
   scrollTrigger: {
     scrub: 1,
     trigger: "h1",
