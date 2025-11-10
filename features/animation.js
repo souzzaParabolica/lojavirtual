@@ -7,7 +7,7 @@ gsap.to(".hero", {
   scrollTrigger: {
     scrub: 1,
     trigger: "h1",
-    start: "top 35%",
+    start: "top 30%",
     end: "top -40%",
     markers: false,
   },
@@ -62,7 +62,18 @@ tl.to(".animate-header", {
       ease: "elastic.out(1, 0.75)",
     },
     "-=0.3"
-  );
+);
+  
+gsap.from(".display", {
+  opacity: 0,
+  y: 50,
+  scrollTrigger: {
+    trigger: isMobile ? ".titulo" : ".display",
+    start: isMobile ? "top 95%" : "top 70%",
+    end: isMobile ? "top 70%" : "top 50%",
+    markers: false,
+  },
+});
 
 // Título animado no scroll
 gsap.from(".display .titulo", {
